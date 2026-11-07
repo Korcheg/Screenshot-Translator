@@ -31,7 +31,8 @@
 - Python 3.15.2
 - `pip install psutil pyqt5 pytesseract colorama pillow deep_translator winotify pyautogui deepl keyboard`
 
-![Interface](/Preview.mp4)
+### Video:
+[![Interface](https://img.youtube.com/vi/28P2pqyavbI/maxresdefault.jpg)](https://www.youtube.com/watch?v=28P2pqyavbI)
 
 ## 📄 Ліцензія
 Проєкт поширюється під ліцензією GPLv3, текст у файлі `LICENSE`.

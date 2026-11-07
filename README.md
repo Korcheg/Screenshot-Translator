@@ -32,7 +32,9 @@ It was also created with the idea that anyone can make their own theme using Qt 
 - Python 3.15.2
 - `pip install psutil pyqt5 pytesseract colorama pillow deep_translator winotify pyautogui deepl keyboard`
 
-![Interface](/Preview.mp4)
+[![Interface](https://img.youtube.com/vi/28P2pqyavbI/maxresdefault.jpg)](https://www.youtube.com/watch?v=28P2pqyavbI)
+
+
 ## 📄 License
 The project is distributed under the GPLv3 license, the text is in the `LICENSE` file.
 

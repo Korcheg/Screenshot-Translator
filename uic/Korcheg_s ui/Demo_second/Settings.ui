@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Frame</class>
+ <widget class="QFrame" name="Frame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1045</width>
+    <height>596</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <widget class="QLabel" name="MainBack">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-10</y>
+     <width>1045</width>
+     <height>611</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Strip">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>-20</y>
+     <width>8</width>
+     <height>691</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(40, 40, 40);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QFrame" name="content_frame">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>9</y>
+     <width>801</width>
+     <height>591</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QFrame" name="page_content">
+    <property name="geometry">
+     <rect>
+      <x>199</x>
+      <y>-1</y>
+      <width>611</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgba(52,52,52,230);
+	border-radius: 2px;
+	border: 0.7px solid  rgb(216, 225, 216);
+	color: rgb(255, 255, 255);
+	font: 75 10pt &quot;Arial Black&quot;;
+
+}
+QPushButton:hover{
+	background-color: rgb(138, 138, 138);
+	font: 75 10pt &quot;Arial Black&quot;;
+}
+
+QPushButton::pressed {           
+	background-color:  rgb(101, 101, 101);
+}</string>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="page_translation">
+        <widget class="QLabel" name="translate_by_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 77 10pt &quot;Arial Black&quot;</string>
+         </property>
+         <property name="text">
+          <string>Translate by: </string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="translate_by_comba">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>20</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+	background-color: rgb(77, 77, 77);
+	border-radius: 2px;
+	color: rgb(255, 255, 255);
+	padding-left: 5px;
+}
+
+QComboBox::drop-down {
+	border: 0px;
+}
+
+QListView {
+	background-color: rgb(77, 77, 77);
+	padding-left: 2px;
+	color: rgb(255, 255, 255);
+}</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Google Translate</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DeepL Translate</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="your_auth_key_label">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 77 10pt &quot;Arial Black&quot;</string>
+         </property>
+         <property name="text">
+          <string>Your auth_key:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="your_auth_key_lineedit">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>65</y>
+           <width>431</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: rgb(77, 77, 77);
+	font: 75 11pt &quot;Arial&quot;;
+	color: rgb(255, 255, 255);
+	border: none;
+}</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="folder_path_lineedit">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>145</y>
+           <width>431</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(77, 77, 77);
+font: 77 10pt &quot;Arial Black&quot;;
+color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="show_message_label">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>173</y>
+           <width>261</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 77 10pt &quot;Arial Black&quot;</string>
+         </property>
+         <property name="text">
+          <string>Show message with translated text:</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="folder_check">
+         <property name="geometry">
+          <rect>
+           <x>205</x>
+           <y>107</y>
+           <width>21</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox::indicator {
+	width: 16px;
+	height: 18px;
+	border: 0.7px solid  rgb(255, 225, 255);
+	background-color: rgb(61, 61, 61);
+}
+QCheckBox::indicator:checked {
+        background-color: qradialgradient(spread:pad, 
+                            cx:0.5,
+                            cy:0.5,
+                            radius:0.9,
+                            fx:0.5,
+                            fy:0.5,
+                            stop:0 rgba(0, 255, 0, 255), 
+                            stop:1 rgba(0, 64, 0, 255));
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="folder_check_label">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>100</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 77 10pt &quot;Arial Black&quot;</string>
+         </property>
+         <property name="text">
+          <string>Check new screenshots:</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="show_message_check">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>180</y>
+           <width>21</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox::indicator {
+	width: 16px;
+	height: 18px;
+	border: 0.7px solid  rgb(255, 225, 255);
+	background-color: rgb(61, 61, 61);
+}
+QCheckBox::indicator:checked {
+        background-color: qradialgradient(spread:pad, 
+                            cx:0.5,
+                            cy:0.5,
+                            radius:0.9,
+                            fx:0.5,
+                            fy:0.5,
+                            stop:0 rgba(0, 255, 0, 255), 
+                            stop:1 rgba(0, 64, 0, 255));
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="folder_path_label">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 77 10pt &quot;Arial Black&quot;</string>
+         </property>
+         <property name="text">
+          <string>Folder:</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="starts_traymodule_check">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>220</y>
+           <width>21</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox::indicator {
+	width: 16px;
+	height: 18px;
+	border: 0.7px solid  rgb(255, 225, 255);
+	background-color: rgb(61, 61, 61);
+}
+QCheckBox::indicator:checked {
+        background-color: qradialgradient(spread:pad, 
+                            cx:0.5,
+                            cy:0.5,
+                            radius:0.9,
+                            fx:0.5,
+                            fy:0.5,
+                            stop:0 rgba(0, 255, 0, 255), 
+                            stop:1 rgba(0, 64, 0, 255));
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="starts_traymodule_label">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>213</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 77 10pt &quot;Arial Black&quot;</string>
+         </property>
+         <property name="text">
+          <string>starts Tray module too</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_controls">
+        <widget class="QLabel" name="first_point_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 77 10pt &quot;Arial Black&quot;</string>
+         </property>
+         <property name="text">
+          <string>Set 1-st point</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="winmode_lineedit">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>180</y>
+           <width>191</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: rgb(77, 77, 77);
+	font: 75 11pt &quot;Arial&quot;;
+	color: rgb(255, 255, 255);
+	border: none;
+}</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="winmode_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>175</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 77 10pt &quot;Arial Black&quot;</string>
+         </property>
+         <property name="text">
+          <string>Change winmode</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="translate_realtime_lineedit">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>145</y>
+           <width>191</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: rgb(77, 77, 77);
+	font: 75 11pt &quot;Arial&quot;;
+	color: rgb(255, 255, 255);
+	border: none;
+}</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="translate_realtime_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 77 10pt &quot;Arial Black&quot;</string>
+         </property>
+         <property name="text">
+          <string>Translate in real time</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="second_point_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>100</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 77 10pt &quot;Arial Black&quot;</string>
+         </property>
+         <property name="text">
+          <string>Set 2-nd point</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="first_point_lineedit">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>65</y>
+           <width>191</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: rgb(77, 77, 77);
+	font: 75 11pt &quot;Arial&quot;;
+	color: rgb(255, 255, 255);
+	border: none;
+}</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="info_btn">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>20</y>
+           <width>31</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>like: Ctrl+G, F1, Shift+I. First letter is BIG, next letters is small, after +, after again BIG letter</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color: rgba(52,52,52,230);
+	border-radius: 2px;
+	border: 0.7px solid  rgb(55, 55, 55);
+	color: rgb(255, 255, 255);
+	font: 75 10pt &quot;Arial Black&quot;;
+
+}
+QPushButton:hover{
+	background-color: rgb(138, 138, 138);
+	font: 75 10pt &quot;Arial Black&quot;;
+}
+
+QPushButton::pressed {           
+	background-color:  rgb(101, 101, 101);
+} </string>
+         </property>
+         <property name="text">
+          <string>?</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="second_point_lineedit">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>105</y>
+           <width>191</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: rgb(77, 77, 77);
+	font: 75 11pt &quot;Arial&quot;;
+	color: rgb(255, 255, 255);
+	border: none;
+}</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="translate_lineedit">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>25</y>
+           <width>191</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: rgb(77, 77, 77);
+	font: 75 11pt &quot;Arial&quot;;
+	color: rgb(255, 255, 255);
+	border: none;
+}</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="translate_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 77 10pt &quot;Arial Black&quot;</string>
+         </property>
+         <property name="text">
+          <string>Translate:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="call_traymode_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>210</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 77 10pt &quot;Arial Black&quot;</string>
+         </property>
+         <property name="text">
+          <string>Call Traymode</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="call_traymode_lineedit">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>215</y>
+           <width>191</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: rgb(77, 77, 77);
+	font: 75 11pt &quot;Arial&quot;;
+	color: rgb(255, 255, 255);
+	border: none;
+}</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_themes">
+        <widget class="QPushButton" name="page_now">
+         <property name="geometry">
+          <rect>
+           <x>260</x>
+           <y>550</y>
+           <width>31</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="page_back_btn">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>550</y>
+           <width>31</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="page_next_btn">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>550</y>
+           <width>31</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&gt;&gt;</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="tabs">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>-11</y>
+      <width>191</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+	background-color: rgb(0, 0, 0);
+}
+
+QPushButton {
+	background-color: rgb(0, 0, 0);
+	border: 2px solid rgb(55, 55, 55);
+	border-radius: 7px;
+	padding: 10px;
+	font-size: 13pt;
+	color: white;
+}
+QPushButton:hover {
+	background-color: rgb(53, 53, 53);
+}
+QPushButton::pressed {           
+	background-color:  rgb(101, 101, 101);
+} </string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="translation_btn">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Translation</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="themes_btn">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Themes</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="controls_btn">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Controls</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="save_btn">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>520</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save changes</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="Strip_2">
+   <property name="geometry">
+    <rect>
+     <x>796</x>
+     <y>0</y>
+     <width>8</width>
+     <height>691</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(182, 182, 182);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QFrame" name="theme_info_frame">
+   <property name="geometry">
+    <rect>
+     <x>789</x>
+     <y>-1</y>
+     <width>261</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QLabel" name="theme_icon_label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>25</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 2px solid rgb(55, 55, 55);
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="theme_name_label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>170</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 75 10pt &quot;Arial Black&quot;;</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="theme_author_btn">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>210</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/** https://stackoverflow.com/questions/63432948/how-can-i-use-a-variable-in-website-link-using-python */
+color: rgb(0, 0, 255);
+font: 75 10pt &quot;Arial Black&quot;;
+background-color: rgb(38, 38, 38);
+text-align: center;</string>
+    </property>
+    <property name="text">
+     <string>Korcheg</string>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../PyQt5_app/resources/resourcesDesigner.qrc"/>
+ </resources>
+ <connections/>
+</ui>

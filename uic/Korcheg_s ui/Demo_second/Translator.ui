@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Frame</class>
+ <widget class="QFrame" name="Frame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>993</width>
+    <height>739</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(45, 45, 45);</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-10</y>
+     <width>991</width>
+     <height>741</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgba(0,0,0,0);
+</string>
+   </property>
+   <widget class="QWidget" name="page_1">
+    <property name="styleSheet">
+     <string notr="true">QTextEdit {
+	background-color: rgba(0,0,0,0.5);
+	color: rgb(255, 255, 255);
+	border-radius:20px;
+	padding: 8px;
+	border: 2px solid rgb(55, 55, 55);
+}
+
+QScrollBar:vertical {
+	background-color: rgb(45,45,45);
+	border: none;
+	width: 5px;
+	border-radius: 0px;
+}
+
+QScrollBar::handle:vertical {
+	border-radius: 7px;
+	background-color: rgb(100, 100, 100);
+}
+
+QScrollBar::add-line:vertical {
+      border: none;
+      background: none;
+}
+
+QScrollBar::sub-line:vertical {
+      border: none;
+      background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+	border: none;
+}
+
+QScrollArea {
+	background-color: rgba(45, 45, 45, 20);
+	border: none;
+}</string>
+    </property>
+    <widget class="QLabel" name="second_coord_label">
+     <property name="geometry">
+      <rect>
+       <x>790</x>
+       <y>100</y>
+       <width>171</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(20, 20, 20);
+color: rgb(255, 255, 255);
+font-size:11pt;</string>
+     </property>
+     <property name="text">
+      <string>Ctrl + G: y None</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="lang_out_combo">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>100</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+	background-color: rgb(215, 215, 215);
+	border-radius: 2px;
+	padding-left: 7px;
+	color: rgb(20, 20, 20);
+}
+
+QComboBox::drop-down {
+	border: 0px;
+}
+
+QListView {
+	padding-left: 4px;
+	color: rgb(20, 20, 20);
+	font-size: 10px;
+}</string>
+     </property>
+     <property name="locale">
+      <locale language="Russian" country="Ukraine"/>
+     </property>
+     <item>
+      <property name="text">
+       <string>English</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Russian</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QTextEdit" name="not_translated_textedit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>491</width>
+       <height>601</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="locale">
+      <locale language="Russian" country="Ukraine"/>
+     </property>
+     <property name="placeholderText">
+      <string>Original Text</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="translate_realtime_check">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox {
+    spacing: 5px;
+	background-color: rgb(0, 0, 0);
+	color: white;
+	font-size: 13pt;
+	padding-left: 6px;
+	border-radius: 4px;
+}
+
+QCheckBox::indicator {
+    width: 13px;
+    height: 13px;
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>Translate area</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="translate_btn">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>40</y>
+       <width>183</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(0, 0, 0);
+	border: 2px solid rgb(55, 55, 55);
+	border-radius: 7px;
+	padding: 10px;
+	font-size: 13pt;
+	color: white;
+}
+QPushButton:hover {
+	background-color: rgb(53, 53, 53);
+}
+QPushButton::pressed {           
+	background-color:  rgb(101, 101, 101);
+} </string>
+     </property>
+     <property name="text">
+      <string>Translate</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="lang_in_combo">
+     <property name="geometry">
+      <rect>
+       <x>412</x>
+       <y>100</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+	background-color: rgb(215, 215, 215);
+	border-radius: 2px;
+	padding-left: 7px;
+	color: rgb(20, 20, 20);
+}
+
+QComboBox::drop-down {
+	border: 0px;
+}
+
+QListView {
+	padding-left: 4px;
+	color: rgb(20, 20, 20);
+	font-size: 10px;
+}</string>
+     </property>
+     <property name="locale">
+      <locale language="Russian" country="Ukraine"/>
+     </property>
+     <item>
+      <property name="text">
+       <string>English</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Russian</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QCheckBox" name="topdisplay_check">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>77</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox {
+    spacing: 5px;
+	background-color: rgb(0, 0, 0);
+	color: white;
+	font-size: 13pt;
+	padding-left: 6px;
+	border-radius: 4px;
+	margin-bottom: 2px;
+}
+
+QCheckBox::indicator {
+    width: 13px;
+    height: 13px;
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>TopMost</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="translated_textedit">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>130</y>
+       <width>471</width>
+       <height>601</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="locale">
+      <locale language="Russian" country="Ukraine"/>
+     </property>
+     <property name="placeholderText">
+      <string>Translated Text</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="first_coord_label">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>100</y>
+       <width>171</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(20, 20, 20);
+color: rgb(255, 255, 255);
+font-size:11pt;</string>
+     </property>
+     <property name="text">
+      <string>Ctrl + Y: x None</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="settings_btn">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>40</y>
+       <width>183</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(0, 0, 0);
+	border: 2px solid rgb(55, 55, 55);
+	border-radius: 7px;
+	padding: 10px;
+	font-size: 13pt;
+	color: white;
+}
+QPushButton:hover {
+	background-color: rgb(53, 53, 53);
+}
+QPushButton::pressed {           
+	background-color:  rgb(101, 101, 101);
+} </string>
+     </property>
+     <property name="text">
+      <string>Settings</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="background">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>30</y>
+       <width>991</width>
+       <height>711</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="top_label">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>1001</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(22, 22, 22);
+color: White;</string>
+     </property>
+     <property name="text">
+      <string>      Translator by Korcheg</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="exit_btn">
+     <property name="geometry">
+      <rect>
+       <x>960</x>
+       <y>10</y>
+       <width>31</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgba(41,41,41,230);
+font-size: 11pt;
+border: none;
+color: rgba(255, 255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: #EA4335
+}
+
+QPushButton::pressed {           
+background-color: #C63B30
+} </string>
+     </property>
+     <property name="text">
+      <string>x</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="minsize_btn">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>10</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgba(41,41,41,230);
+font-size: 13pt;
+border: none;
+color: rgba(255, 255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(101, 101, 101);
+}
+
+QPushButton::pressed {           
+background-color: rgb(90, 90, 90);
+} </string>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>100</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 255, 255), stop:0.1 rgba(255, 255, 255, 255), stop:0.2 rgba(255, 176, 176, 167), stop:0.3 rgba(255, 151, 151, 92), stop:0.4 rgba(255, 125, 125, 51), stop:0.5 rgba(255, 76, 76, 205), stop:0.52 rgba(255, 76, 76, 205), stop:0.6 rgba(255, 180, 180, 84), stop:1 rgba(255, 255, 255, 0));
+color: rgb(255, 255, 255)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>background</zorder>
+    <zorder>second_coord_label</zorder>
+    <zorder>lang_out_combo</zorder>
+    <zorder>translate_btn</zorder>
+    <zorder>lang_in_combo</zorder>
+    <zorder>topdisplay_check</zorder>
+    <zorder>first_coord_label</zorder>
+    <zorder>settings_btn</zorder>
+    <zorder>top_label</zorder>
+    <zorder>exit_btn</zorder>
+    <zorder>minsize_btn</zorder>
+    <zorder>translated_textedit</zorder>
+    <zorder>not_translated_textedit</zorder>
+    <zorder>label</zorder>
+    <zorder>translate_realtime_check</zorder>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QTextEdit" name="translated_textedit_pg2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>23</y>
+       <width>361</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTextEdit {
+	background-color: rgba(0,0,0,0.5);
+	color: rgb(255, 255, 255);
+	border-radius:20px;
+	padding: 8px;
+	border: 2px solid rgb(216, 225, 216);
+}
+
+QScrollBar:vertical {
+	background-color: rgb(45,45,45);
+	border: none;
+	width: 5px;
+	border-radius: 0px;
+}
+
+QScrollBar::handle:vertical {
+	border-radius: 7px;
+	background-color: rgb(100, 100, 100);
+}
+
+QScrollBar::add-line:vertical {
+      border: none;
+      background: none;
+}
+
+QScrollBar::sub-line:vertical {
+      border: none;
+      background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+	border: none;
+}
+
+QScrollArea {
+	background-color: rgba(45, 45, 45, 20);
+	border: none;
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="top_label_pg2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>341</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(75, 75, 75, 230);
+color: White;</string>
+     </property>
+     <property name="text">
+      <string>Translator by Korcheg</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="max_btn">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>10</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgba(41,41,41,230);
+font-size: 13pt;
+border: none;
+color: rgba(255, 255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(101, 101, 101);
+}
+
+QPushButton::pressed {           
+background-color: rgb(90, 90, 90);
+} </string>
+     </property>
+     <property name="text">
+      <string>+</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
